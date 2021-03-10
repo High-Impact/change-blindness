@@ -191,9 +191,10 @@ export default {
             }
         ],
         link: [      
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Nunito:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap' },
-        { rel: 'stylesheet', href: '/global.css' }
+            { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Nunito:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap' },
+            { rel: 'stylesheet', href: '/global.css' },
+            { rel: 'icon', type: 'image/x-icon', href: '/favi.png' }
         ],
         }
     }
