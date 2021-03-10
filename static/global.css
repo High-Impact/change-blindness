@@ -1,0 +1,38 @@
+.mont {
+  font-family: 'Montserrat', sans-serif;
+}
+.nun {
+  font-family: 'Nunito', sans-serif;
+}
+:root {
+  --color-blue:#3D6FB1;
+  --color-pink:#CB8BB3;
+  --color-dark:#1A2330;
+}
+
+#container {
+  min-height:100vh;
+  min-width:100vw;
+  background:#E5E5E5;
+}
+
+button {
+    background: transparent;
+    border: 2px solid var(--color-blue);
+    font-variant: all-small-caps;
+    font-weight: 700;
+    padding: .25em .5em;
+    color: var(--color-blue);
+    border-radius: .3em;
+    transition:300ms;
+}
+button:focus {
+    outline:none;
+}
+button.disabled {
+    opacity:.5;
+}
+button:hover {
+    transform:scale(1.02);
+    background:rgba(0,0,0,.05)
+}

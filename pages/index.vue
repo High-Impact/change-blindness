@@ -1,72 +1,88 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        nuxtjs
-      </h1>
-      <h2 class="subtitle">
-        My astonishing Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div id="container">
+    <h1 class="mont title">{{title}}</h1>
+    <h2 class="mont sub-title">A web app by Jonathan Knoll</h2>
+    <intro></intro>
+    <img class="dots" src="/dots.svg"/>
+    <img class="triangle" src="/triangles.svg"/>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Intro from '~/components/Intro.vue'
 
 export default {
   components: {
-    Logo
+    Intro
+  },
+
+  data() {
+      return {
+        title: 'Change Blindness'
+      }
+    },
+  
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'A simple web app to help illustrate a weakness in our perceived consciousness'
+        }
+      ],
+      link: [      
+       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Nunito:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap' },
+       { rel: 'stylesheet', href: '/global.css' }
+      ],
+    }
   }
 }
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.mont {
+  font-family: 'Montserrat', sans-serif;
+}
+.nun {
+  font-family: 'Nunito', sans-serif;
+}
+:root {
+  --color-blue:#3D6FB1;
+  --color-pink:#CB8BB3;
+}
+
+#container {
+  min-height:100vh;
+  min-width:100vw;
+  background:#E5E5E5;
+}
+
+
+.dots {
+  position:fixed;
+  top:0;
+  right:0;
+}
+.triangle {
+  position:fixed;
+  bottom:1rem;
+  left:1rem;
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+  padding-top:1rem;
+  margin-left:1rem;
+}
+.sub-title {
+  margin-left:1rem;
+  font-size:1em;
+  font-weight:600;
+  font-variant: small-caps;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
 
-.links {
-  padding-top: 15px;
-}
 </style>
