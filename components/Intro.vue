@@ -42,9 +42,11 @@
       <p>Cheers,<br>Jonathan</p>
       <br><br>
     </div>
-    <button :class="{disabled: counter == 0}" @click="back">Back</button>
-    <button :class="{disabled: counter == 2}" @click="next">Next</button>
-    <NuxtLink class="start" v-if="counter == 2" to="/exercise">Let's start</NuxtLink>
+    <div class="buttons">
+      <button :class="{disabled: counter == 0}" @click="back">Back</button>
+      <button :class="{disabled: counter == 2}" v-if="counter != 2" @click="next">Next</button>
+      <NuxtLink class="start" v-if="counter == 2" to="/exercise">Let's start</NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -99,16 +101,19 @@ img {
     z-index: -1;
     position: relative;
 }
+.buttons {
+}
 .start {
-  position:absolute;
-  bottom:2rem;
-  right:2rem;
   color:var(--color-pink);
   font-variant: all-small-caps;
   font-weight:900;
   font-size:2em;
   text-decoration: none;
   transition:300ms;
+  padding: 0;
+  line-height: 0;
+  vertical-align: middle;
+  margin-left:.5em;
 }
 .start:hover {
   transform:scale(1.01);
