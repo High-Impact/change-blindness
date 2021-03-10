@@ -39,10 +39,20 @@
                         <span class="nun timerText">Timer: </span>
                         <span v-if="timePassed">{{timePassed.toString().slice(0, -2)}}.{{timePassed.toString().slice(-2)}}</span>
                         <span v-else>0.0</span>
+                        <br>
+                        <br>
+                        <button @click="run()">
+                            <span v-if="!timerRunning">Start</span>
+                            <span v-else>Stop</span>
+                        </button>
+                    </div>
+                    <div class="toggle">
                     </div>
                     <div class="cheats">
                         <span class="cheatsText">Cheats are: </span><span v-if="cheats">ON</span> <span v-else>OFF</span>
-                        <button style="margin-left:2em;" @click="cheats = !cheats">Toggle Cheats</button>
+                        <br>
+                        <br>
+                        <button @click="cheats = !cheats">Toggle Cheats</button>
                         
                     </div>
                 </div>
