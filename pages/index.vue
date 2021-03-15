@@ -1,10 +1,10 @@
 <template>
   <div id="container">
-    <h1 class="mont title">{{title}}</h1>
-    <h2 class="mont sub-title">A web app by Jonathan Knoll</h2>
-    <intro></intro>
-    <img class="dots" src="/dots.svg"/>
-    <img class="triangle" src="/triangles.svg"/>
+      <h1 class="mont title">{{title}}</h1>
+      <h2 class="mont sub-title">A web app by Jonathan Knoll</h2>
+      <intro></intro>
+      <img class="dots" src="/dots.svg"/>
+      <img class="triangle" src="/triangles.svg"/>
   </div>
 </template>
 

@@ -36,3 +36,15 @@ button:hover {
     transform:scale(1.02);
     background:rgba(0,0,0,.05)
 }
+#container .mobile {
+  display:none;
+}
+
+@media(max-width:767px) {
+  #container .desktop{
+    display:none;
+  }
+  #container .mobile {
+    display:block;
+  }
+}
